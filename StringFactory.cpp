@@ -186,7 +186,6 @@ void StringFactory::checkPrecedence(Queue* inputQ, Queue* outputQ, Stack* opStac
         string pop = opStack->pop();
         outputQ->enqueue(pop);
         cout << head << " is not a higher priority than " << top <<". Trying again.\n";
-        checkPrecedence(inputQ, outputQ, opStack);
     }
     else if(headPriority > topPriority) //input op is higher than the top so we will push it onto op stack
     {
