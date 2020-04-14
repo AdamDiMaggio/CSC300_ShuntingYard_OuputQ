@@ -179,6 +179,10 @@ void StringFactory::checkPrecedence(Queue* inputQ, Queue* outputQ, Stack* opStac
     {
         topPriority = 3;
     }
+    else if(top == "(")
+    {
+        topPriority = 0;
+    }
 
 
     if(headPriority <= topPriority) //the input op is <= top so we don't push it onto the op stack
